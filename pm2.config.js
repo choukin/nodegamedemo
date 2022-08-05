@@ -18,7 +18,7 @@ module.exports = {
             "ssh_options":"StrictHostKeyChecking=no",
             "post-setup":"ls -la",
             "pre-deploy-local":"echo '本地要执行的命令'",
-            "post-deploy":"npm install && npm run build && pm2 startOrRestart ecosystem.js --env production",
+            "post-deploy":"npm install && npm run build && pm2 startOrRestart pm2.config.js --env production",
             "env":{
                 "NODE_ENV":"production"
             }
