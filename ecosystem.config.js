@@ -10,6 +10,17 @@ module.exports = {
         "env_production":{
             "NODE_ENV":"production"
         }
+    },{
+        "name":"nodejob",
+        "script":"/www/nodejob/auto-sign/cronindex.js",
+        instances : "2",
+        exec_mode : "cluster",
+        watch:true,
+        "env":{
+        },
+        "env_production":{
+            "NODE_ENV":"production"
+        }
     }],
     "deploy":{
         "production":{
