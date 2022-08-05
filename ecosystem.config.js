@@ -33,7 +33,7 @@ module.exports = {
             "post-setup":"ls -la",
             "pre-deploy-local":"echo '本地要执行的命令'",
             "pre-deploy":"echo '开始拉取'",
-            "post-deploy":"npm deploy",
+            "post-deploy":"npm run deploy",
             "env":{
                 "NODE_ENV":"production"
             }
