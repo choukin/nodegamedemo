@@ -10,5 +10,21 @@ module.exports = {
         "env_production":{
             "NODE_ENV":"production"
         }
-    }]
+    }],
+    "deploy":{
+        "production":{
+            "user":"root",
+            "host":["hw"],
+            "ref":"origin/main",
+            "repo":"git@github.com:choukin/nodegamedemo.git",
+            "path":"/www/",
+            "ssh_options":"StrictHostKeyChecking=no",
+            "post-setup":"ls -la",
+            "pre-deploy-local":"npm install && npm run build && echo '本地要执行的命令'",
+            "post-deploy":"pm2 start",
+            "env":{
+                "NODE_ENV":"production"
+            }
+        }
+    }    
 }    
