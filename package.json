@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon src/servers/server.js",
     "start": "npm run build && cross-env NODE_ENV=production nodemon src/servers/server.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "deploy":"npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
