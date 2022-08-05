@@ -20,8 +20,8 @@ module.exports = {
             "path":"/www/",
             "ssh_options":"StrictHostKeyChecking=no",
             "post-setup":"ls -la",
-            "pre-deploy-local":"npm install && npm run build && echo '本地要执行的命令'",
-            "post-deploy":"pm2 start",
+            "pre-deploy-local":"echo '本地要执行的命令'",
+            "post-deploy":"npm install && npm run build && pm2 start",
             "env":{
                 "NODE_ENV":"production"
             }
