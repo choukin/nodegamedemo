@@ -21,7 +21,8 @@ module.exports = {
             "ssh_options":"StrictHostKeyChecking=no",
             "post-setup":"ls -la",
             "pre-deploy-local":"echo '本地要执行的命令'",
-            "post-deploy":"npm install",
+            "pre-deploy":"npm install",
+            "post-deploy":"pm2 start",
             "env":{
                 "NODE_ENV":"production"
             }
