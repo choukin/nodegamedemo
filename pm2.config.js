@@ -12,7 +12,7 @@ module.exports = {
         "production":{
             "user":"root",
             "host":["hw"],
-            "ref":"github/main",
+            "ref":"origin/main",
             "repo":"git@github.com:choukin/nodegamedemo.git",
             "path":"/www/",
             "ssh_options":"StrictHostKeyChecking=no",
