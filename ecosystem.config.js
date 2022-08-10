@@ -33,7 +33,22 @@ module.exports = {
             "post-setup":"ls -la",
             "pre-deploy-local":"echo '本地要执行的命令'",
             "pre-deploy":"echo '开始拉取'",
-            "post-deploy":"sh /www/source/deploy.sh ",
+            "post-deploy":"pm2 start nodeGame",
+            "env":{
+                "NODE_ENV":"production"
+            }
+        },
+        "production1":{
+            "user":"root",
+            "host":["hw"],
+            "ref":"origin/main",
+            "repo":"git@github.com:choukin/nodegamedemo.git",
+            "path":"/www/",
+            "ssh_options":"StrictHostKeyChecking=no",
+            "post-setup":"ls -la",
+            "pre-deploy-local":"echo '本地要执行的命令'",
+            "pre-deploy":"echo '开始拉取'",
+            "post-deploy":"npm install",
             "env":{
                 "NODE_ENV":"production"
             }
